@@ -50,7 +50,7 @@ python main.py
 
 ## Example Output
 
-[Example Picture](example/example_pic.png)
+![Example Picture](example/example_pic.png)
 
 ## Configuration / Parameter Description
 - `timeout = 5` → time in seconds to reset tracker if no detection
