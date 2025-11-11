@@ -1,0 +1,82 @@
+# train for fixed-wing-UAV detection
+
+path: path/to/your/data #dataset path
+
+train: images/train
+val: images/val
+test: images/test
+
+# class number
+nc: 1 
+
+# class name
+names:
+  0: 'fixed-wing-UAV'
+
+# Augmentation 
+augmentations:
+  rotate: [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225, 240, 255, 270, 285, 300, 315, 330, 345]  # 0-360 derece arasında döndürme
+  flip: 0.5  
+  scale: [0.8, 1.2]  
+  hue: 0.1  
+  saturation: 1.2  
+  brightness: 1.2 
+  noise: 0.02  
+  zoom: [0.8, 1.1]  
+  gamma: 0.1  
+  perspective: 0.5  
+
+
+# trtain hyperparameters
+hyperparameters:
+  lr0: 0.001  
+  lrf: 0.01  
+  momentum: 0.937  
+  weight_decay: 0.0005  
+  warmup_epochs: 3  
+  warmup_momentum: 0.8  
+  warmup_bias_lr: 0.1 
+  box: 0.05  
+  cls: 0.5 
+  cls_pw: 1.0 
+  obj: 1.0  
+  obj_pw: 1.0 
+  iou_t: 0.5 
+  anchor_t: 4.0  
+  fl_gamma: 0.0  
+  hsv_h: 0.015  
+  hsv_s: 0.7  
+  hsv_v: 0.4 
+  degrees: 10.0 
+  translate: 0.1  
+  scale: 0.5  
+  shear: 0.0  
+  flip: 0.5  
+  mosaic: 1.0  
+  mixup: 0.0  
+  patience: 10  
+
+
+# Model parameters
+model:
+  type: YOLOv8  
+  depth_multiple: 0.33  
+  width_multiple: 0.50  
+  backbone:
+    type: CSPDarknet53  
+  head:
+    type: YOLOv8Head  
+
+
+batch_size: 16 
+epochs: 100  
+
+rect: False  
+resume: False  
+nosave: False 
+notest: False  
+nobest: False  
+evolve: False  
+
+
+optimizer: Adam  # Optimizer, Adam (recommended) or SGD
