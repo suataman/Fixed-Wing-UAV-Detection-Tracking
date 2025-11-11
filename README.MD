@@ -4,9 +4,9 @@
 This project implements detection and tracking of fixed-wing unmanned aerial vehicles (UAVs) in video footage. A single-class detection model (`fixed-wing-UAV`) is employed to locate UAVs, followed by tracking using OpenCV’s CSRT (Channel and Spatial Reliability Tracker) algorithm. The system also computes yaw and pitch angles based on the object’s position relative to the image center.
 
 ## Team  
-- Umut ŞUATAMAN – Computer Engineering  
-- Açelya YILDIRIM – Computer Engineering    
-- Ayşenur GÜLSÜM– Computer Engineering    
+- Umut ŞUATAMAN – Computer Engineer  
+- Açelya YILDIRIM – Computer Engineer    
+- Ayşenur GÜLSÜM– Computer Engineer    
 
 ## Features  
 - Real-time or recorded video input for fixed-wing UAV detection  
