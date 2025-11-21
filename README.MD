@@ -33,7 +33,7 @@ pip install opencv-python numpy ultralytics
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourUsername/your-repo-name.git
+git clone https://github.com/suataman/Fixed-Wing-UAV-Detection-Tracking.git
 ```
 
 2. Place your trained model into the models/ directory (e.g. models/model.pt).
